@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Porfolio</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="introPage.css">
+
+</head>
+
+<body>
+
+    <div class="content1">
+        <h1 class="content1">Sung Na</h1>
+        <p class="content1">BCIT Computer Systems Technology student, designer, and developer</p>
+        <button class="content1" style="font-family: Verdana;">Start Exploring</button>
+    </div>
+
+    <div class="content2" id="background">
+
+        <img src="images/profile.JPG" alt="pro" id="profile">
+        <p class="bio">Hello! My name is Sung Na and this is my introductory website.
+            I am a CS student aiming to become a web designer. Click the button to check out my projects!
+        </p>
+        <div class="box"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
+
+    <script>
+        gsap.from(".content1", {
+            opacity: 0,
+            duration: 1,
+            y: -100,
+            stagger: 0.4
+        });
+        gsap.from("#background", {
+            opacity: 0,
+            duration: 1.5,
+            delay: 1.5, 
+            y: 500,
+            ease: "slow (0.7, 0.7, false)"
+        });
+        gsap.from(".box", {
+            opacity: 0,
+            duration: 2,
+            delay: 2.5,
+            y: 200,
+            ease: "elastic.out(1, 0.3)"
+        });
+        gsap.from("#profile", {
+            opacity: 0,
+            duration: 1.5,
+            delay: 2.8,
+            x: 200,
+            ease: "power4.out"
+        });
+        gsap.from(".bio", {
+            opacity: 0,
+            duration: 1.5,
+            delay: 3.2,
+            x: -200,
+            ease: "back.out(1.7)"
+        });
+    </script>
+
+</body>
+
+
+
+</html>
